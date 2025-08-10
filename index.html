@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AfrikLink — Lancement bientôt</title>
+  <meta name="description" content="AfrikLink — la plateforme qui connecte les talents subsahariens et les clients marocains. Réservez votre place parmi les 100 premiers inscrits !" />
+  <style>
+    /* === Variables / Palette === */
+    :root{
+      --green: #28A745;
+      --yellow: #FFC107;
+      --red: #C0392B;
+      --dark: #2C3E50;
+      --bg-gradient-start: #065f46; /* deep green */
+      --bg-gradient-end: #ff7a18;   /* warm orange */
+      --card-bg: rgba(255,255,255,0.05);
+      --glass: rgba(255,255,255,0.06);
+      --max-width: 1024px;
+      --radius-lg: 16px;
+      --ff: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* === Reset & base === */
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      color: #fff;
+      background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px;}
+
+    /* === Header === */
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), transparent);
+      border-radius:12px;
+      margin-bottom:22px;
+      backdrop-filter: blur(6px);
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background: linear-gradient(135deg,var(--yellow),var(--green));
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--dark)
+    }
+    h1{margin:0;font-size:1.25rem;letter-spacing:0.2px}
+    .tag{font-size:0.82rem;color:rgba(255,255,255,0.9);opacity:0.95}
+
+    /* === Main layout === */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:18px;
+      align-items:center;
+      padding:18px 0 36px 0;
+    }
+    @media(min-width:880px){
+      .hero{grid-template-columns: 1fr 420px;}
+    }
+
+    .card{
+      background:var(--card-bg);
+      padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    }
+
+    .lead{
+      font-size:1.1rem;margin-bottom:12px;color: #fff;
+    }
+    .pitch{
+      font-size:1.4rem;font-weight:700;margin:8px 0 18px 0;color:#fff;
+    }
+
+    /* === Countdown === */
+    .countdown{
+      display:flex;gap:12px;flex-wrap:wrap;
+      margin:12px 0 18px 0;
+    }
+    .countdown .item{
+      min-width:72px;background:var(--glass);padding:12px;border-radius:10px;text-align:center;
+    }
+    .countdown .num{font-size:1.25rem;font-weight:700;color:var(--yellow)}
+    .countdown .label{font-size:0.78rem;color:rgba(255,255,255,0.9)}
+
+    /* === Privileges list === */
+    .priv-list{display:grid;gap:10px;margin-top:12px}
+    .priv{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--yellow));display:flex;align-items:center;justify-content:center;color:var(--dark);font-weight:700}
+    .priv strong{display:block;font-size:1rem}
+    .priv span{display:block;font-size:0.88rem;color:rgba(255,255,255,0.95);opacity:0.95}
+
+    /* === CTA === */
+    .cta-block{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+    .btn-primary{
+      background:var(--yellow);
+      color:var(--dark);
+      padding:12px 18px;border-radius:999px;font-weight:700;border:none;cursor:pointer;
+      box-shadow:0 8px 24px rgba(0,0,0,0.18);transition:transform .12s ease;
+    }
+    .btn-primary:hover{transform:translateY(-3px)}
+    .btn-whatsapp{background:transparent;border:2px solid rgba(255,255,255,0.12);padding:10px 14px;border-radius:999px;color:#fff}
+
+    /* === Right column (visual) === */
+    .visual{
+      padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.03));
+      display:flex;flex-direction:column;gap:14px;align-items:stretch;
+    }
+    .hero-image{height:220px;border-radius:10px;background-image:linear-gradient(135deg, rgba(255,255,255,0.04), rgba(0,0,0,0.05));display:flex;align-items:center;justify-content:center;font-weight:700}
+    .stat{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px;background:rgba(255,255,255,0.02);border-radius:8px}
+    .stat strong{font-size:1.15rem;color:var(--yellow)}
+
+    /* === Footer === */
+    footer{margin-top:28px;text-align:center;font-size:0.9rem;opacity:0.95;color:rgba(255,255,255,0.9)}
+
+    /* small */
+    @media(max-width:420px){
+      .logo{width:48px;height:48px}
+      .countdown .item{min-width:60px;padding:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AL</div>
+        <div>
+          <h1>AfrikLink</h1>
+          <div class="tag">Le meilleur de la communauté subsaharienne — au Maroc</div>
+        </div>
+      </div>
+      <div>
+        <small style="color:rgba(255,255,255,0.9)">Pré-inscription ouverte • 100 places privilégiées</small>
+      </div>
+    </header>
+
+    <main class="hero">
+      <!-- Left: info -->
+      <section class="card" aria-label="Annonce lancement">
+        <div class="lead">🚀 Lancement prochain — Réservez votre place parmi les 100 premiers</div>
+        <div class="pitch">AfrikLink — votre passerelle vers des talents, services et produits uniques de la communauté subsaharienne.</div>
+
+        <div id="countdown" class="countdown" aria-hidden="false">
+          <div class="item"><div class="num" id="days">00</div><div class="label">Jours</div></div>
+          <div class="item"><div class="num" id="hours">00</div><div class="label">Heures</div></div>
+          <div class="item"><div class="num" id="minutes">00</div><div class="label">Minutes</div></div>
+          <div class="item"><div class="num" id="seconds">00</div><div class="label">Secondes</div></div>
+        </div>
+
+        <p style="margin-top:8px;color:rgba(255,255,255,0.95)">
+          AfrikLink met en relation des prestataires subsahariens qualifiés avec les clients marocains — pour des services fiables et des produits authentiques.
+        </p>
+
+        <div class="priv-list" aria-label="Avantages 100 premiers">
+          <div class="priv">
+            <div class="dot">1</div>
+            <div>
+              <strong>Mise en avant prioritaire</strong>
+              <span>Visibilité premium sur la page d’accueil pendant 30 jours.</span>
+            </div>
+          </div>
+
+          <div class="priv">
+            <div class="dot">2</div>
+            <div>
+              <strong>Badge "Pionnier AfrikLink"</strong>
+              <span>Inspire confiance et attire plus de clients.</span>
+            </div>
+          </div>
+
+          <div class="priv">
+            <div class="dot">3</div>
+            <div>
+              <strong>Accès premium gratuit</strong>
+              <span>Fonctionnalités avancées offertes pendant 1 mois.</span>
+            </div>
+          </div>
+
+          <div class="priv">
+            <div class="dot">4</div>
+            <div>
+              <strong>Offres partenaires</strong>
+              <span>Réductions et avantages exclusifs avec nos partenaires.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-block">
+          <a id="cta-register" class="btn-primary" href="#" target="_blank" rel="noopener">💡 Je réserve ma place</a>
+          <a id="cta-whatsapp" class="btn-whatsapp" href="#" target="_blank" rel="noopener">💬 Contact WhatsApp</a>
+        </div>
+
+        <p style="margin-top:14px;font-size:0.9rem;color:rgba(255,255,255,0.9)">
+          <strong>Garanti :</strong> inscription gratuite — pas d'engagement — assistance pour débuter.
+        </p>
+      </section>
+
+      <!-- Right: visual / stats -->
+      <aside class="visual card" aria-label="Visuel et statistiques">
+        <div class="hero-image" role="img" aria-label="Illustration AfrikLink">
+          <div style="text-align:center;">
+            <div style="font-size:1.05rem;font-weight:700">Talents • Services • Produits</div>
+            <div style="opacity:0.9;margin-top:6px">Authentiques — Fiables — Locaux</div>
+          </div>
+        </div>
+
+        <div class="stat"><div>Prestataires pré-inscrits</div><strong id="stat-pre">0</strong></div>
+        <div class="stat"><div>Villes couvertes</div><strong>Casablanca, Rabat…</strong></div>
+
+        <div style="margin-top:8px;font-size:0.95rem;color:rgba(255,255,255,0.95)">
+          <strong>Besoin d'aide ?</strong>
+          <div style="margin-top:6px">Contact rapide via WhatsApp ou message sur notre page Facebook.</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> AfrikLink • <small>Connecter • Vendre • Réussir</small>
+    </footer>
+  </div>
+
+  <script>
+    /********** CONFIG — modifie ici **********/
+    const LAUNCH_DATE = new Date(); // EDIT: mettre la date de lancement souhaitée
+    // Exemple : new Date('2025-09-01T10:00:00')  <-- remplace par ta date/heure
+    LAUNCH_DATE.setDate(LAUNCH_DATE.getDate() + 14); // Par défaut : +14 jours (modifiable)
+
+    const GOOGLE_FORM_LINK = 'https://forms.gle/f8S9GXu5NXAHfKW19'; // ton formulaire
+    const WHATSAPP_LINK = 'https://wa.me/212752332241'; // remplace par ton lien WhatsApp (format international)
+    /*******************************************/
+
+    // Countdown logic
+    function updateCountdown(){
+      const now = new Date().getTime();
+      const distance = LAUNCH_DATE.getTime() - now;
+      const days = Math.max(0, Math.floor(distance / (1000*60*60*24)));
+      const hours = Math.max(0, Math.floor((distance % (1000*60*60*24)) / (1000*60*60)));
+      const minutes = Math.max(0, Math.floor((distance % (1000*60*60)) / (1000*60)));
+      const seconds = Math.max(0, Math.floor((distance % (1000*60)) / 1000));
+
+      document.getElementById('days').textContent = String(days).padStart(2,'0');
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+
+      if(distance <= 0){
+        document.getElementById('countdown').innerHTML = '<div style="padding:12px 8px;border-radius:8px;background:var(--glass);">🚀 Lancement en cours ! Inscrivez-vous pour profiter des offres.</div>';
+      }
+    }
+
+    // Hook CTA and WhatsApp
+    document.getElementById('cta-register').href = GOOGLE_FORM_LINK;
+    document.getElementById('cta-whatsapp').href = WHATSAPP_LINK;
+
+    // Fake stat (tu peux remplacer par un fetch réel)
+    let preInscribed = 67;
+    // Option: récupérer le nombre réel via Google Sheets API ou endpoint backend et mettre à jour #stat-pre
+    document.getElementById('stat-pre').textContent = preInscribed;
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Init
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
